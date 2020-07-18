@@ -15,7 +15,7 @@
     
     
       
-        <title>Getting Started - SmileChat</title>
+        <title>Development - SmileChat</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#development" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Getting Started
+              Development
             
           </span>
         </div>
@@ -161,6 +161,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -172,14 +184,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting Started
+        Development
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
-      Getting Started
+    <a href="./" title="Development" class="md-nav__link md-nav__link--active">
+      Development
     </a>
     
       
@@ -198,29 +210,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started_1" class="md-nav__link">
-    Getting Started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
+  <a href="#building-documents" class="md-nav__link">
+    Building Documents
   </a>
   
 </li>
@@ -229,18 +220,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../development/" title="Development" class="md-nav__link">
-      Development
-    </a>
   </li>
 
     
@@ -270,29 +249,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started_1" class="md-nav__link">
-    Getting Started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
+  <a href="#building-documents" class="md-nav__link">
+    Building Documents
   </a>
   
 </li>
@@ -313,119 +271,19 @@
                   
                 
                 
-                <h1 id="getting-started">Getting Started</h1>
-<p>PyBot is a chatbot framework to work with several services (Slack, Twitter, CLI).</p>
-<h2 id="architecture">Architecture</h2>
-<p>Basic architecture to communicate with a service.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">           get message</span>
-<span class="err">         &lt;--------------</span>
-<span class="err">    App                    Service</span>
-<span class="err">         --------------&gt;</span>
-<span class="err">         * respond to message</span>
-<span class="err">         * post</span>
+                <h1 id="development">Development</h1>
+<h2 id="building-documents">Building Documents</h2>
+<p>The document is provided by <a href="https://www.mkdocs.org/">MkDocs</a> and published by <a href="https://www.npmjs.com/package/gh-pages">gh-pages</a>.</p>
+<p>First, build your document to convert markdown files to HTML files.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ bash docs_builder.sh build
 </code></pre></div>
 </td></tr></table>
 
-<p>Use different service depending on respond and post</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">            get message</span>
-<span class="err">          &lt;--------------</span>
-<span class="err">    App                    Service</span>
-<span class="err">     |    --------------&gt;</span>
-<span class="err">     |    respond to message</span>
-<span class="err">     |</span>
-<span class="err">     |------------------&gt;  Service</span>
-<span class="err">              post</span>
+<p>Then built files are placed in <code>docs/site</code> .</p>
+<p>After checking the content, run <code>gh-pages</code> to commit on gh-pages and push to GitHub.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nv">GIT_USER</span><span class="o">=</span><span class="s2">&quot;Your Name &lt;email@example.com&gt;&quot;</span> bash docs_builder.sh publish
 </code></pre></div>
 </td></tr></table>
-
-<h2 id="installation">Installation</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ pip install git+https://github.com/noriyukipy/smilechat
-</code></pre></div>
-</td></tr></table>
-
-<h2 id="getting-started_1">Getting Started</h2>
-<p>PyBot requires config and app files to run.
-<code>init</code> provides you default config and app files.</p>
-<p>To place these files, create working directory first and change directory there.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ mkdir work
-$ <span class="nb">cd</span> work
-</code></pre></div>
-</td></tr></table>
-
-<p>Then run <code>init</code> command to generate default config and app templates.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m pybot.main init
-$ ls -1
-app.py
-config.yml
-</code></pre></div>
-</td></tr></table>
-
-<p>Then execute <code>run</code> command which enables you to talk with PyBot via stdin/stdout.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m pybot.main run --config_file<span class="o">=</span>config.yml
-INFO:root:<span class="s2">&quot;post_service&quot;</span> is not defined in config file. <span class="s2">&quot;service&quot;</span> is used <span class="k">for</span> <span class="s2">&quot;post_service&quot;</span> instead.
-you&gt; Hi
-bot&gt; This is a response to <span class="s2">&quot;Hi&quot;</span>
-This is a post to <span class="s2">&quot;Hi&quot;</span>
-you&gt;
-</code></pre></div>
-</td></tr></table>
-
-<h2 id="services">Services</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Stream</th>
-<th>Post</th>
-<th>Respond to message</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pybot.service.CliService</td>
-<td>CLI service to work with stdin and stdout</td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>pybot.service.SlackService</td>
-<td>Slack service to work with Slack</td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-</tr>
-<tr>
-<td>pybot.service.TwitterSampleStreamService</td>
-<td><a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/get_statuses_sample">Twitter sample stream</a> service to get messages from sample stream</td>
-<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
-<td><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/274c.png" title=":x:" /></td>
-<td><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/274c.png" title=":x:" /></td>
-</tr>
-</tbody>
-</table>
                 
               
               
@@ -444,7 +302,7 @@ you&gt;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../getting_started/" title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -453,25 +311,11 @@ you&gt;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Getting Started
               </div>
             </div>
           </a>
         
-        
-          <a href="../development/" title="Development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Development
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
