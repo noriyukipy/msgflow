@@ -198,13 +198,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -212,8 +205,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started_1" class="md-nav__link">
-    Getting Started
+  <a href="#your-first-app" class="md-nav__link">
+    Your First App
   </a>
   
 </li>
@@ -221,6 +214,13 @@
         <li class="md-nav__item">
   <a href="#services" class="md-nav__link">
     Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
   </a>
   
 </li>
@@ -270,13 +270,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -284,8 +277,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started_1" class="md-nav__link">
-    Getting Started
+  <a href="#your-first-app" class="md-nav__link">
+    Your First App
   </a>
   
 </li>
@@ -293,6 +286,13 @@
         <li class="md-nav__item">
   <a href="#services" class="md-nav__link">
     Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
   </a>
   
 </li>
@@ -315,48 +315,13 @@
                 
                 <h1 id="getting-started">Getting Started</h1>
 <p>SmileChat is a chatbot framework to work with several services (Slack, Twitter, CLI).</p>
-<h2 id="architecture">Architecture</h2>
-<p>Basic architecture to communicate with a service.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">           get message</span>
-<span class="err">         &lt;--------------</span>
-<span class="err">    App                    Service</span>
-<span class="err">         --------------&gt;</span>
-<span class="err">         * respond to message</span>
-<span class="err">         * post</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Use different service depending on respond and post</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">            get message</span>
-<span class="err">          &lt;--------------</span>
-<span class="err">    App                    Service</span>
-<span class="err">     |    --------------&gt;</span>
-<span class="err">     |    respond to message</span>
-<span class="err">     |</span>
-<span class="err">     |------------------&gt;  Service</span>
-<span class="err">              post</span>
-</code></pre></div>
-</td></tr></table>
-
 <h2 id="installation">Installation</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ pip install git+https://github.com/noriyukipy/smilechat
 </code></pre></div>
 </td></tr></table>
 
-<h2 id="getting-started_1">Getting Started</h2>
-<p>SmileChat requires config and app files to run.
+<h2 id="your-first-app">Your First App</h2>
+<p>To run your chatbot, SmileChat requires config and app files.
 <code>init</code> provides you default config and app files.</p>
 <p>To place these files, create working directory first and change directory there.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -426,6 +391,40 @@ you&gt;
 </tr>
 </tbody>
 </table>
+<h2 id="architecture">Architecture</h2>
+<p>Basic architecture to communicate with a service.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">           get message</span>
+<span class="err">         &lt;--------------</span>
+<span class="err">    App                    Service</span>
+<span class="err">         --------------&gt;</span>
+<span class="err">         * respond to message</span>
+<span class="err">         * post</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Use different service depending on respond and post</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">            get message</span>
+<span class="err">          &lt;--------------</span>
+<span class="err">    App                    Service</span>
+<span class="err">     |    --------------&gt;</span>
+<span class="err">     |    respond to message</span>
+<span class="err">     |</span>
+<span class="err">     |------------------&gt;  Service</span>
+<span class="err">              post</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
