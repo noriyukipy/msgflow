@@ -333,7 +333,7 @@
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># Service to connect</span>
 <span class="nt">service</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pybot.service.CliService</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">smilechat.service.CliService</span>
   <span class="nt">config</span><span class="p">:</span>
     <span class="nt">user_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">you</span>
 
@@ -356,7 +356,7 @@ You can just specify each service in YAML configuration file to work with these 
 6
 7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># Slack service</span>
 <span class="nt">post_service</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pybot.service.SlackService</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">smilechat.service.SlackService</span>
   <span class="nt">config</span><span class="p">:</span>
     <span class="nt">slack_api_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${YOUR_TOKEN_HERE}</span>
     <span class="nt">channel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${YOUR_CHANNEL_HERE}</span>
@@ -389,8 +389,8 @@ You can just specify each service in YAML configuration file to work with these 
 
 <p>Then, the class can be specified in your configuration file.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">:</span>
-  <span class="n">name</span><span class="o">:</span> <span class="n">app</span><span class="o">.</span><span class="na">MyApp</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nt">app</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">app.MyApp</span>
 </code></pre></div>
 </td></tr></table>
 

@@ -314,7 +314,7 @@
                 
                 
                 <h1 id="getting-started">Getting Started</h1>
-<p>PyBot is a chatbot framework to work with several services (Slack, Twitter, CLI).</p>
+<p>SmileChat is a chatbot framework to work with several services (Slack, Twitter, CLI).</p>
 <h2 id="architecture">Architecture</h2>
 <p>Basic architecture to communicate with a service.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -356,7 +356,7 @@
 </td></tr></table>
 
 <h2 id="getting-started_1">Getting Started</h2>
-<p>PyBot requires config and app files to run.
+<p>SmileChat requires config and app files to run.
 <code>init</code> provides you default config and app files.</p>
 <p>To place these files, create working directory first and change directory there.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -369,20 +369,20 @@ $ <span class="nb">cd</span> work
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m pybot.main init
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m smilechat.main init
 $ ls -1
 app.py
 config.yml
 </code></pre></div>
 </td></tr></table>
 
-<p>Then execute <code>run</code> command which enables you to talk with PyBot via stdin/stdout.</p>
+<p>Then execute <code>run</code> command which enables you to talk with SmileChat via stdin/stdout.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m pybot.main run --config_file<span class="o">=</span>config.yml
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python -m smilechat.main run --config_file<span class="o">=</span>config.yml
 INFO:root:<span class="s2">&quot;post_service&quot;</span> is not defined in config file. <span class="s2">&quot;service&quot;</span> is used <span class="k">for</span> <span class="s2">&quot;post_service&quot;</span> instead.
 you&gt; Hi
 bot&gt; This is a response to <span class="s2">&quot;Hi&quot;</span>
@@ -404,21 +404,21 @@ you&gt;
 </thead>
 <tbody>
 <tr>
-<td>pybot.service.CliService</td>
+<td>smilechat.service.CliService</td>
 <td>CLI service to work with stdin and stdout</td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 </tr>
 <tr>
-<td>pybot.service.SlackService</td>
+<td>smilechat.service.SlackService</td>
 <td>Slack service to work with Slack</td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 </tr>
 <tr>
-<td>pybot.service.TwitterSampleStreamService</td>
+<td>smilechat.service.TwitterSampleStreamService</td>
 <td><a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/get_statuses_sample">Twitter sample stream</a> service to get messages from sample stream</td>
 <td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
 <td><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/274c.png" title=":x:" /></td>
